@@ -1,0 +1,41 @@
+body {
+  /* fondo transparente para que se vea bien en Notion */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#widget {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+#marco {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#hora {
+  position: absolute;
+  top: 45%; /* un poco más arriba */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 48px;
+  color: #ff69b4;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+#fecha {
+  position: absolute;
+  top: 65%; /* debajo de la hora */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 30px;
+  color: #ff69b4; /* lavanda pastel */
+  text-shadow: 1px 1px 3px #fff;
+}
