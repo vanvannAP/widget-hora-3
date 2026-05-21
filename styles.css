@@ -1,5 +1,4 @@
 body {
-  /* fondo transparente para que se vea bien en Notion */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,8 +7,9 @@ body {
 
 #widget {
   position: relative;
-  width: 400px;
-  height: 300px;
+  width: 100%;       /* ocupa todo el ancho disponible */
+  max-width: 400px;  /* tamaño máximo */
+  height: auto;
 }
 
 #marco {
@@ -20,22 +20,22 @@ body {
 
 #hora {
   position: absolute;
-  top: 45%; /* un poco más arriba */
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Jersey 10', sans-serif;
-  font-size: 48px;
+  font-size: 12vw;   /* escala con el ancho de la ventana */
   color: #ff69b4;
-  text-shadow: 2px 2px 4px #fff;
+  text-shadow: 0.2em 0.2em 0.4em #fff;
 }
 
 #fecha {
   position: absolute;
-  top: 65%; /* debajo de la hora */
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Jersey 10', sans-serif;
-  font-size: 30px;
-  color: #ff69b4; /* lavanda pastel */
-  text-shadow: 1px 1px 3px #fff;
+  font-size: 6vw;    /* más pequeño pero también proporcional */
+  color: #9370db;
+  text-shadow: 0.1em 0.1em 0.3em #fff;
 }
