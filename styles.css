@@ -3,13 +3,16 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
 
+/* El widget se convierte en un contenedor de consulta */
 #widget {
   position: relative;
-  width: 100%;       /* ocupa todo el ancho disponible */
-  max-width: 400px;  /* tamaño máximo */
+  width: 100%;
+  max-width: 400px;
   height: auto;
+  container-type: inline-size;  /* habilita unidades cqw */
 }
 
 #marco {
@@ -24,9 +27,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Jersey 10', sans-serif;
-  font-size: 12vw;   /* escala con el ancho de la ventana */
+  /* 12% del ancho del widget (400px → 48px aprox) */
+  font-size: 12cqw;
   color: #ff69b4;
   text-shadow: 0.2em 0.2em 0.4em #fff;
+  white-space: nowrap;   /* evita saltos de línea */
 }
 
 #fecha {
@@ -35,7 +40,19 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Jersey 10', sans-serif;
-  font-size: 6vw;    /* más pequeño pero también proporcional */
+  /* 6% del ancho del widget (400px → 24px aprox) */
+  font-size: 6cqw;
   color: #9370db;
   text-shadow: 0.1em 0.1em 0.3em #fff;
+  white-space: nowrap;
+}
+
+/* Opcional: un límite mínimo para pantallas muy pequeñas */
+@container (max-width: 200px) {
+  #hora {
+    font-size: 10cqw;   /* un poco más pequeño si el widget es muy estrecho */
+  }
+  #fecha {
+    font-size: 5cqw;
+  }
 }
